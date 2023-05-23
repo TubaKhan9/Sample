@@ -60,10 +60,19 @@ public class LoginInterface extends JFrame {
 
                 if (userDao.authenticate(username, password)) {
                     JOptionPane.showMessageDialog(LoginInterface.this, "Login successful!");
+                    AdminInterface AdminInterface = new AdminInterface();
+                    AdminInterface.setVisible(true);
+                   
+                    
+  
+                
+                
                 } else {
                     JOptionPane.showMessageDialog(LoginInterface.this, "Invalid username or password", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
+
+           
         });
 
         pack();
